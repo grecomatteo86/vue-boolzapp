@@ -70,6 +70,27 @@ a{
 .nots_container{
   height: 60px;
   background-color: #8EDAFC;
+  display: flex;
+}
+.left_nots{
+  height: 100%;
+  background-color: blue;
+  flex-basis: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-bell-slash{
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.right_nots{
+  height: 100%;
+  background-color: green;
 }
 /* /notifications */
 /* /left_container */
