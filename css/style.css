@@ -132,19 +132,19 @@ li{
 /* contacts */
 .contacts_container{
   height: calc(100% - 145px);
-  background-color: green;
+  background-color: #fff;
   overflow: auto;
 }
 .contact_item{
   height: 60px;
-  background-color: red;
-  border: 1px solid black;
   display: flex;
+}
+.contacts_list>li:not(:last-child){
+  border-bottom: 0.2px solid lightgrey;
 }
 .logo_container{
   height: 100%;
   width: 60px;
-  background-color: yellow;
 }
 .logo_container>img{
   width: 100%;
@@ -152,6 +152,7 @@ li{
 }
 .name_container{
   height: 100%;
+  padding-top: 5px;
 }
 /* /contacts */
 /* /left_container */
