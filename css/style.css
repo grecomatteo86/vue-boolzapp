@@ -135,8 +135,19 @@ li{
   background-color: green;
   overflow: auto;
 }
-.contacts_list{
-
+.contact_item{
+  height: 60px;
+  background-color: red;
+  border: 1px solid black;
+  display: flex;
+}
+.logo_container{
+  height: 100%;
+  width: 60px;
+  background-color: yellow;
+}
+.name_container{
+  height: 100%;
 }
 /* /contacts */
 /* /left_container */

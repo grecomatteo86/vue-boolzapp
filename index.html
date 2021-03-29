@@ -60,7 +60,14 @@
       <!-- contacts -->
       <div class="contacts_container">
         <ul class="contacts_list">
-          <li class="contact_item"></li>
+          <li class="contact_item" v-for="item in contacts">
+            <div class="logo_container">
+              <img src="" alt="">
+            </div>
+            <div class="name_container">
+              <h2></h2>
+            </div>
+          </li>
         </ul>
       </div>
       <!-- /contacts -->
