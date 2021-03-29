@@ -113,7 +113,7 @@ li{
   height: 80%;
   border: none;
   border-radius: 3px;
-  border: 0.5px solid lightgrey;
+  box-shadow: 0px 0px 10px -5px #88888;
 }
 ::placeholder {
   font-size: 10px;
@@ -183,10 +183,14 @@ li{
 .emoticons_container>a,
 .audio_container>a{
   margin-right: 0;
+  color:#6B7376;
 }
-.emoticons_container{
-  background-color: yellow;
+.right_container .finder_input{
+  height: 100%;
+  width: calc(100% - 100px);
+  background-color: transparent;
+  border: none;
 }
-.audio_container{
-  background-color: blue;
+.right_container .finder_input ::placeholder{
+  padding-left: 10px;
 }
