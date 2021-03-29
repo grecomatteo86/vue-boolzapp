@@ -167,10 +167,54 @@ li{
 .right_container>.lid{
   border-left: 0.5px solid lightgrey;
 }
+.right_container .lid_name_container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+.right_container .lid_name_container p{
+  color: #B1B1B1;
+}
 .messages_container{
   background-image: url('../img/mine.jpg');
   height: calc(100% - 100px);
+  width: 100%;
   overflow: auto;
+}
+.message_frame{
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.message{
+  max-width: 60%;
+  min-width: 30%;
+  margin: 6px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.sent{
+  background-color: #D5F9BA;
+  margin-left: auto;
+}
+.received{
+  background-color: #fff;
+  margin-right: auto;
+}
+.user_message{
+  margin-right: auto;
+}
+.subtitle{
+  font-size: 7px;
+  color: grey;
+  margin-left: auto;
 }
 .emoticons_container,
 .audio_container{
