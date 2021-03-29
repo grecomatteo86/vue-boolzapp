@@ -12,16 +12,50 @@ body{
   align-items: center;
 }
 .wrapper{
-  background-color: red;
   width: 950px;
   height: 90%;
   display: flex;
 }
+/* left_container */
 .left_container{
   background-color: orange;
   flex-basis: 35%;
+  height: 100%;
 }
+/* header */
+.left_header{
+  background-color: red;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.my_avatar_container{
+  background-color: yellow;
+  height: 100%;
+  display: flex;
+}
+.my_logo_container{
+  height: 100%;
+}
+.my_logo_container>img{
+  height: 100%;
+}
+.my_name_container{
+  display: flex;
+  align-items: center;
+}
+.my_name_container>h2{
+  font-size: 12px;
+  background-color: pink;
+  font-weight: 400;
+}
+/* /header */
+.icnos_container{
+  background-color: green;
+}
+/* /left_container */
 .right_container{
   background-color: blue;
   flex-basis: 65%;
+  height: 100%;
 }
