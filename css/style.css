@@ -158,7 +158,6 @@ li{
 /* /contacts */
 /* /left_container */
 .right_container{
-  background-color: blue;
   flex-basis: 65%;
   height: 100%;
   display: flex;
@@ -167,4 +166,9 @@ li{
 }
 .right_container>.lid{
   border-left: 0.5px solid lightgrey;
+}
+.messages_container{
+  background-image: url('../img/mine.jpg');
+  height: calc(100% - 100px);
+  overflow: auto;
 }
