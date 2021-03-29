@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* generals */
 body{
   height: 100vh;
   font-family: 'Lato', sans-serif;
@@ -16,6 +17,11 @@ body{
   height: 90%;
   display: flex;
 }
+a{
+  color: #B1B1B1;
+  margin-right: 15px;
+}
+/* /generals */
 /* left_container */
 .left_container{
   background-color: orange;
@@ -29,6 +35,7 @@ body{
   display: flex;
   justify-content: space-between;
 }
+/* my_avatar_container */
 .my_avatar_container{
   background-color: yellow;
   height: 100%;
@@ -49,10 +56,15 @@ body{
   background-color: pink;
   font-weight: 400;
 }
-/* /header */
+/* /my_avatar_container */
+/* icnos_container */
 .icnos_container{
   background-color: green;
+  display: flex;
+  align-items: center;
 }
+/* /icnos_container */
+/* /header */
 /* /left_container */
 .right_container{
   background-color: blue;
