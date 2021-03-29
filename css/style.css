@@ -54,6 +54,10 @@ a{
 li{
   list-style: none;
 }
+textarea:focus,
+input:focus{
+  outline: none;
+}
 /* /generals */
 /* left_container */
 .left_container{
@@ -102,7 +106,7 @@ li{
 /* finder */
 .finder_input{
   height: 35px;
-  background-color: rgb(250, 250, 250);
+  background-color: #F3EEEA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +145,7 @@ li{
   cursor: pointer;
 }
 .contacts_list>li:not(:last-child){
-  border-bottom: 0.2px solid lightgrey;
+  border-bottom: 1px solid #F3EEEA;
 }
 .logo_container{
   height: 100%;
@@ -157,6 +161,7 @@ li{
 }
 /* /contacts */
 /* /left_container */
+/* right_container */
 .right_container{
   flex-basis: 65%;
   height: 100%;
@@ -216,6 +221,9 @@ li{
   color: grey;
   margin-left: auto;
 }
+.right_container .lid:last-child{
+  background-color: #F3EEEA;
+}
 .emoticons_container,
 .audio_container{
   width: 70px;
@@ -238,3 +246,4 @@ li{
 .right_container .finder_input ::placeholder{
   padding-left: 10px;
 }
+/* /right_container */
