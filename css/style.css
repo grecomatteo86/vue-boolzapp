@@ -17,6 +17,13 @@ body{
   height: 90%;
   display: flex;
 }
+h2{
+  font-size: 12px;
+  font-weight: 400;
+}
+p{
+  font-size: 10px;
+}
 .headers{
   background-color: #EAEAEA;
   height: 50px;
@@ -54,10 +61,6 @@ a{
   display: flex;
   align-items: center;
 }
-.my_name_container>h2{
-  font-size: 12px;
-  font-weight: 400;
-}
 /* /my_avatar_container */
 /* icnos_container */
 .icnos_container{
@@ -74,7 +77,6 @@ a{
 }
 .left_nots{
   height: 100%;
-  background-color: blue;
   flex-basis: 60px;
   display: flex;
   justify-content: center;
@@ -90,7 +92,9 @@ a{
 }
 .right_nots{
   height: 100%;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /* /notifications */
 /* /left_container */
