@@ -38,6 +38,8 @@ a{
   background-color: orange;
   flex-basis: 35%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 /* left_header */
 /* my_avatar_container */
@@ -64,6 +66,12 @@ a{
 }
 /* /icnos_container */
 /* /left_header */
+/* notifications */
+.nots_container{
+  height: 60px;
+  background-color: #8EDAFC;
+}
+/* /notifications */
 /* /left_container */
 .right_container{
   background-color: blue;
