@@ -7,4 +7,21 @@ body{
   height: 100vh;
   font-family: 'Lato', sans-serif;
   background-image: linear-gradient(to top, #DBDBD2 80%, #009688 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  background-color: red;
+  width: 950px;
+  height: 90%;
+  display: flex;
+}
+.left_container{
+  background-color: orange;
+  flex-basis: 35%;
+}
+.right_container{
+  background-color: blue;
+  flex-basis: 65%;
 }
