@@ -96,11 +96,7 @@
       <!-- /header -->
       <div class="messages_container">
         <div class="message_frame">
-          <div class="sent message" v-for="(item,index) in contacts[chatIndex].messages" v-if="item.status == 'sent'">
-            <p class="user_message">{{item.message}}</p>
-            <p class="subtitle"><time>{{item.date}}</time></p>
-          </div>
-          <div class="received message" v-for="item in contacts[chatIndex].messages" v-if="item.status == 'received'">
+          <div class="sent message" v-for="(item,index) in contacts[chatIndex].messages" v-bind:class=" item.status == 'sent' ? 'sent' : 'received' ">
             <p class="user_message">{{item.message}}</p>
             <p class="subtitle"><time>{{item.date}}</time></p>
           </div>
