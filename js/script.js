@@ -92,6 +92,7 @@ var app = new Vue (
     },
     methods:{
       addChat: function(item){
+        var now = dayjs();
         // var creation bacause the this
         const contacts = this.contacts;
         const chatIndex = this.chatIndex;
@@ -101,7 +102,6 @@ var app = new Vue (
           setTimeout(answer,1000);
           function answer() {
             var ansObj = {};
-            var now = dayjs();
             ansObj.date = now;
             ansObj.message = 'ok';
             ansObj.status = 'received';
@@ -111,7 +111,6 @@ var app = new Vue (
           // automatic_answer_timing_function
           console.log(this.userChat);
           var newObj = {};
-          var now = dayjs();
           // new object creation
           newObj.date = now;
           newObj.message = this.userChat;
