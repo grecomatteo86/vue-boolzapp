@@ -60,13 +60,13 @@
       <!-- contacts -->
       <div class="contacts_container">
         <ul class="contacts_list">
-          <li class="contact_item" v-for="item in contacts">
+          <li class="contact_item" v-for="(item,index) in contacts">
             <div class="logo_container">
-              <img :src="`img/avatar${item.avatar}.jpg`" class="avatars" alt="">
+              <img :src="`img/avatar${item.avatar}.jpg`" class="avatars" :alt="item.name">
               <!-- <img :src="'img/avatar' + item.avatar + '.jpg'" alt=""> -->
             </div>
             <div class="name_container">
-              <h2>{{item.name}}</h2>
+              <h2>{{item.name}} {{index}}</h2>
             </div>
           </li>
         </ul>
@@ -96,13 +96,13 @@
       <!-- /header -->
       <div class="messages_container">
         <div class="message_frame">
-          <div class="sent message">
-            <p class="user_message">Ciao come stai?</p>
-            <p class="subtitle"><time>10/10/2010 15:00:00</time></p>
+          <div class="sent message" v-for="item in contacts[0].messages" v-if="item.status == 'sent'">
+            <p class="user_message">{{item.message}}</p>
+            <p class="subtitle"><time>{{item.date}}</time></p>
           </div>
-          <div class="received message">
-            <p class="user_message">Tutto bene, grazie!</p>
-            <p class="subtitle"><time>10/10/2010 15:00:00</time></p>
+          <div class="received message" v-for="item in contacts[0].messages" v-if="item.status == 'received'">
+            <p class="user_message">{{item.message}}</p>
+            <p class="subtitle"><time>{{item.date}}</time></p>
           </div>
         </div>
       </div>

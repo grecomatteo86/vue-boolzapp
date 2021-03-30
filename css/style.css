@@ -246,4 +246,10 @@ input:focus{
 .right_container .finder_input ::placeholder{
   padding-left: 10px;
 }
+.right_container .finder_field{
+  width: 100%;
+}
 /* /right_container */
+.active{
+  background-color: gray;
+}
