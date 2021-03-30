@@ -82,8 +82,8 @@
           <div class="lid_logo_container" v-for="(item,index) in contacts" v-if="chatIndex == index">
             <img class="avatars" :src="`img/avatar${item.avatar}.jpg`" :alt="item.name">
           </div>
-          <div class="lid_name_container" v-for="(item,index) in contacts" v-if="chatIndex == index">
-            <h2>{{item.name}}</h2>
+          <div class="lid_name_container">
+            <h2>{{contacts[chatIndex].name}}</h2>
             <p>Ultimo accesso oggi alle</p>
           </div>
         </div>

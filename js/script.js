@@ -97,6 +97,8 @@ var app = new Vue (
           // this.messages.push(this.userChat);
           this.userChat = "";
         }
+        // this.contacts[this.chatIndex].messages.message = this.userChat;
+        // this.contacts[this.chatIndex].messages.push(this.userChat);
       },
     }
   }
