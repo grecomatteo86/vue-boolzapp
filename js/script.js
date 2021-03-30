@@ -94,9 +94,12 @@ var app = new Vue (
       addChat: function(item){
         if (this.userChat != ""){
           console.log(this.userChat);
-          // this.messages.push(this.userChat);
+          var newObj = {};
+          newObj.message = this.userChat;
+          this.contacts[this.chatIndex].messages.push(newObj);
           this.userChat = "";
         }
+        // this.messages.push(this.userChat);
         // this.contacts[this.chatIndex].messages.message = this.userChat;
         // this.contacts[this.chatIndex].messages.push(this.userChat);
       },
