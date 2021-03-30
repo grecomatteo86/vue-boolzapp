@@ -2,6 +2,7 @@ var app = new Vue (
   {
     el:'#app',
     data:{
+      userChat:'',
       contacts: [
         {
           name: 'Michele',
@@ -88,6 +89,13 @@ var app = new Vue (
         },
       ],
       chatIndex:0
+    },
+    methods:{
+      addChat: function(item){
+        if (this.userChat != ""){
+          alert('');
+        }
+      },
     }
   }
 );
