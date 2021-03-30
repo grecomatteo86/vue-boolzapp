@@ -96,12 +96,10 @@ var app = new Vue (
           console.log(this.userChat);
           var newObj = {};
           newObj.message = this.userChat;
+          newObj.status = 'sent';
           this.contacts[this.chatIndex].messages.push(newObj);
           this.userChat = "";
         }
-        // this.messages.push(this.userChat);
-        // this.contacts[this.chatIndex].messages.message = this.userChat;
-        // this.contacts[this.chatIndex].messages.push(this.userChat);
       },
     }
   }
