@@ -92,11 +92,21 @@ var app = new Vue (
     },
     methods:{
       addChat: function(item){
+        // var creation bacause the this
+        const contacts = this.contacts;
+        const chatIndex = this.chatIndex;
+        // var creation bacause the this
         if (this.userChat != ""){
           // automatic_answer_timing_function
           setTimeout(answer,1000);
           function answer() {
-            
+            var ansObj = {};
+            var now = dayjs();
+            ansObj.date = now;
+            ansObj.message = 'ok';
+            ansObj.status = 'received';
+            console.log(ansObj);
+            contacts[chatIndex].messages.push(ansObj);
           }
           // automatic_answer_timing_function
           console.log(this.userChat);
@@ -107,7 +117,7 @@ var app = new Vue (
           newObj.message = this.userChat;
           newObj.status = 'sent';
           // new object creation
-          this.contacts[this.chatIndex].messages.push(newObj);
+          contacts[chatIndex].messages.push(newObj);
           this.userChat = "";
         }
       },
