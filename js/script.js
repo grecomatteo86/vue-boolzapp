@@ -93,7 +93,9 @@ var app = new Vue (
     methods:{
       addChat: function(item){
         if (this.userChat != ""){
-          alert('');
+          console.log(this.userChat);
+          // this.messages.push(this.userChat);
+          this.userChat = "";
         }
       },
     }
