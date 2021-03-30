@@ -95,6 +95,8 @@ var app = new Vue (
         if (this.userChat != ""){
           console.log(this.userChat);
           var newObj = {};
+          var now = dayjs();
+          newObj.date = now;
           newObj.message = this.userChat;
           newObj.status = 'sent';
           this.contacts[this.chatIndex].messages.push(newObj);
