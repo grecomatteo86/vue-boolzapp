@@ -60,7 +60,7 @@
       <!-- contacts -->
       <div class="contacts_container">
         <ul class="contacts_list">
-          <li class="contact_item" v-for="(item,index) in contacts">
+          <li class="contact_item" v-for="(item,index) in contacts" v-bind:class=" chatIndex == index ? 'active' : '' ">
             <div class="logo_container">
               <img :src="`img/avatar${item.avatar}.jpg`" class="avatars" :alt="item.name">
               <!-- <img :src="'img/avatar' + item.avatar + '.jpg'" alt=""> -->
@@ -96,7 +96,7 @@
       <!-- /header -->
       <div class="messages_container">
         <div class="message_frame">
-          <div class="sent message" v-for="item in contacts[0].messages" v-if="item.status == 'sent'">
+          <div class="sent message" v-for="(item,index) in contacts[0].messages" v-if="item.status == 'sent'">
             <p class="user_message">{{item.message}}</p>
             <p class="subtitle"><time>{{item.date}}</time></p>
           </div>
