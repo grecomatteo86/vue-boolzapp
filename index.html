@@ -79,11 +79,11 @@
       <!-- header -->
       <div class="lid">
         <div class="lid_avatar_container">
-          <div class="lid_logo_container">
-            <img class="avatars" src="img/avatar_io.jpg" alt="my_avatar">
+          <div class="lid_logo_container" v-for="(item,index) in contacts" v-if="chatIndex == index">
+            <img class="avatars" :src="`img/avatar${item.avatar}.jpg`" :alt="item.name">
           </div>
-          <div class="lid_name_container">
-            <h2>Giulia Rossi</h2>
+          <div class="lid_name_container" v-for="(item,index) in contacts" v-if="chatIndex == index">
+            <h2>{{item.name}} {{index}}</h2>
             <p>Ultimo accesso oggi alle</p>
           </div>
         </div>
