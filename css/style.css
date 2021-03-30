@@ -211,7 +211,7 @@ input:focus{
 }
 .received{
   background-color: #fff;
-  margin-right: auto;
+  margin-right: 350px;
 }
 .user_message{
   margin-right: auto;
