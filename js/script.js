@@ -93,12 +93,20 @@ var app = new Vue (
     methods:{
       addChat: function(item){
         if (this.userChat != ""){
+          // automatic_answer_timing_function
+          setTimeout(answer,1000);
+          function answer() {
+            
+          }
+          // automatic_answer_timing_function
           console.log(this.userChat);
           var newObj = {};
           var now = dayjs();
+          // new object creation
           newObj.date = now;
           newObj.message = this.userChat;
           newObj.status = 'sent';
+          // new object creation
           this.contacts[this.chatIndex].messages.push(newObj);
           this.userChat = "";
         }
