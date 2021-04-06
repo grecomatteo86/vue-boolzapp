@@ -122,7 +122,10 @@ var app = new Vue (
         }
       },
       chatFinder:function(){
-        alert();
+        // console.log(this.contacts[0].name);
+        this.contacts.forEach((item) => {
+          console.log(item.name)
+        });
       }
     }
   }
