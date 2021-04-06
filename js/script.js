@@ -129,15 +129,16 @@ var app = new Vue (
           this.contacts.forEach((item) => {
             // console.log(item.name);      mi stampa tutti i nomi
 
-            let vis = item.visible;
-            console.log(vis);
+
+            // console.log(item.visible);    mi stampa le 4 visibilità
 
             for(var i = 0; i < item.name.length; i++) {
               // console.log(item.name[i]);  mi stampa tutti nomi array like
               if (item.name[i].includes(userInput)) {
-                // vis = true;
+                // console.log(userInput);
+                item.visible = true;
               } else {
-                // vis = false;
+                item.visible = false;
               }
             }
           });
