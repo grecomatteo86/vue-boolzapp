@@ -129,7 +129,7 @@ var app = new Vue (
           this.contacts.forEach((item) => {
             // console.log(item.name);      mi stampa tutti i nomi
             for(var i = 0; i < item.name.length; i++) {
-              // console.log(item.name[i]);  mi stampa tutti nomi snocciolati
+              // console.log(item.name[i]);  mi stampa tutti nomi array like
               if (item.name[i].includes(userInput)) {
                 alert('');
               }
