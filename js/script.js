@@ -90,7 +90,11 @@ var app = new Vue (
       ],
       chatIndex:0,
       userFinder:'',
-      arrayNames:[]
+      arrayNames:[],
+      arrayOne:[],
+      arrayTwo:[],
+      arrayThree:[],
+      arrayFour:[]
     },
     methods:{
       addChat: function(item){
@@ -128,10 +132,58 @@ var app = new Vue (
           // console.log(this.contacts[0].name);     //mi stampa il primo nome
 
           this.contacts.forEach((item) => {
-            this.arrayNames.push(item.name);
-
+            this.arrayNames.push(item.name);   //mi creo l'array di nomi
           });
-          console.log(this.arrayNames);
+          // console.log(this.arrayNames);  //mi stampa l'array di nomi
+          // console.log(this.arrayNames[0])  //mi stampa solo il primo nome
+
+
+          for (var i = 0; i < this.arrayNames[0].length;i++) {
+            // console.log(this.arrayNames[0][i]); //mi stampa il primo nome array like
+            this.arrayOne.push(this.arrayNames[0][i]);
+            console.log(this.arrayOne);
+          }
+          if (this.arrayOne.includes(this.userFinder)) {
+            this.contacts[0].visible = true;
+          } else {
+            this.contacts[0].visible = false;
+          }
+
+
+          for (var i = 0; i < this.arrayNames[1].length;i++) {
+            // console.log(this.arrayNames[0][i]); //mi stampa il primo nome array like
+            this.arrayTwo.push(this.arrayNames[1][i]);
+            console.log(this.arrayTwo);
+          }
+          if (this.arrayTwo.includes(this.userFinder)) {
+            this.contacts[1].visible = true;
+          } else {
+            this.contacts[1].visible = false;
+          }
+
+
+          for (var i = 0; i < this.arrayNames[2].length;i++) {
+            // console.log(this.arrayNames[0][i]); //mi stampa il primo nome array like
+            this.arrayThree.push(this.arrayNames[2][i]);
+            console.log(this.arrayThree);
+          }
+          if (this.arrayThree.includes(this.userFinder)) {
+            this.contacts[2].visible = true;
+          } else {
+            this.contacts[2].visible = false;
+          }
+
+
+          for (var i = 0; i < this.arrayNames[3].length;i++) {
+            // console.log(this.arrayNames[0][i]); //mi stampa il primo nome array like
+            this.arrayFour.push(this.arrayNames[3][i]);
+            console.log(this.arrayThree);
+          }
+          if (this.arrayFour.includes(this.userFinder)) {
+            this.contacts[3].visible = true;
+          } else {
+            this.contacts[3].visible = false;
+          }
 
 
 
