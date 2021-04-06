@@ -94,22 +94,43 @@ var app = new Vue (
     methods:{
       addChat: function(item){
         var now = dayjs();
+
         // var creation bacause the this
-        const contacts = this.contacts;
-        const chatIndex = this.chatIndex;
+
+        // const contacts = this.contacts;
+        // const chatIndex = this.chatIndex;
+
         // var creation bacause the this
+
         if (this.userChat != ""){
-          // automatic_answer_timing_function
-          setTimeout(answer,1000);
-          function answer() {
+
+          // // automatic_answer_timing_function FIRST WAY
+          // setTimeout(answer,1000);
+          // function answer() {
+          //   var ansObj = {};
+          //   ansObj.date = now;
+          //   ansObj.message = 'ok';
+          //   ansObj.status = 'received';
+          //   console.log(ansObj);
+          //   contacts[chatIndex].messages.push(ansObj);
+          // }
+          // automatic_answer_timing_function FIRST WAY
+
+          // // automatic_answer_timing_function SECOND WAY
+          setTimeout(() => {
             var ansObj = {};
             ansObj.date = now;
             ansObj.message = 'ok';
             ansObj.status = 'received';
             console.log(ansObj);
-            contacts[chatIndex].messages.push(ansObj);
-          }
-          // automatic_answer_timing_function
+            this.contacts[this.chatIndex].messages.push(ansObj);
+          }, 1000);
+          // automatic_answer_timing_function SECOND WAY
+          /* Se utilizziamo le Arrow Function non c'è bisogno di
+          salvare il this di Vue in una variabile, perchè l'Arrow Function
+          eredita automaticamente il this dal suo genitore, cioè da addChat,
+          che appunto sarà sempre il this di Vue e non di Window */
+
           console.log(this.userChat);
           var newObj = {};
           // new object creation
@@ -117,22 +138,19 @@ var app = new Vue (
           newObj.message = this.userChat;
           newObj.status = 'sent';
           // new object creation
-          contacts[chatIndex].messages.push(newObj);
+          this.contacts[this.chatIndex].messages.push(newObj);
           this.userChat = "";
         }
       },
       chatFinder:function(){
-
         this.contacts.forEach((item) => {
-
+          // console.log(item.name); //mi stampa tutti i nomi
           if (item.name.toLowerCase().includes(this.userFinder.toLowerCase())) {
             item.visible=true;
           } else {
             item.visible=false;
           }
-
         });
-
       }
     }
   }
