@@ -64,7 +64,7 @@
       <!-- contacts -->
       <div class="contacts_container">
         <ul class="contacts_list">
-          <li class="contact_item" v-for="(item,index) in contacts" v-bind:class=" chatIndex == index ? 'active' : '' " @click="chatIndex = index">
+          <li class="contact_item" v-for="(item,index) in contacts" v-bind:class=" chatIndex == index ? 'active' : '' " @click="chatIndex = index" v-show="item.visible">
             <div class="logo_container">
               <img :src="`img/avatar${item.avatar}.jpg`" class="avatars" :alt="item.name">
               <!-- <img :src="'img/avatar' + item.avatar + '.jpg'" alt=""> -->
