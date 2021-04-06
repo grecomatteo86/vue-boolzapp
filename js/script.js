@@ -88,7 +88,8 @@ var app = new Vue (
           ],
         },
       ],
-      chatIndex:0
+      chatIndex:0,
+      userFinder:''
     },
     methods:{
       addChat: function(item){
@@ -120,6 +121,9 @@ var app = new Vue (
           this.userChat = "";
         }
       },
+      chatFinder:function(){
+        alert();
+      }
     }
   }
 );

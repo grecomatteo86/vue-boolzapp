@@ -58,7 +58,7 @@
       <!-- finder -->
       <div class="finder_input">
         <label class="label" for=""><i class="fas fa-search"></i></label>
-        <input class="finder_field" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
+        <input v-model="userFinder" @keyup="chatFinder" class="finder_field" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
       </div>
       <!-- /finder -->
       <!-- contacts -->
@@ -112,7 +112,7 @@
           <a href="#"><i class="far fa-grin"></i></a>
         </div>
         <div class="finder_input">
-          <input v-on:keyup.13="addChat" v-model="userChat" class="finder_field" type="text" name="" value="" placeholder="scrivi un messaggio">
+          <input v-on:keyup.13="addChat"  v-model="userChat" class="finder_field" type="text" name="" value="" placeholder="scrivi un messaggio">
         </div>
         <div class="audio_container">
           <a href="#"><i class="fas fa-microphone"></i></a>
