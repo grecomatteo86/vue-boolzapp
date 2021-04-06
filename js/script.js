@@ -122,10 +122,20 @@ var app = new Vue (
         }
       },
       chatFinder:function(){
-        // console.log(this.contacts[0].name);
-        this.contacts.forEach((item) => {
-          console.log(item.name)
-        });
+        if (this.userFinder != "") {
+          // console.log(this.userFinder);
+          let userInput = this.userFinder;
+          // console.log(this.contacts[0].name);
+          this.contacts.forEach((item) => {
+            // console.log(item.name);      mi stampa tutti i nomi
+            for(var i = 0; i < item.name.length; i++) {
+              // console.log(item.name[i]);  mi stampa tutti nomi snocciolati
+              if (item.name[i].includes(userInput)) {
+                alert('');
+              }
+            }
+          });
+        }
       }
     }
   }
