@@ -89,7 +89,8 @@ var app = new Vue (
         },
       ],
       chatIndex:0,
-      userFinder:''
+      userFinder:'',
+      arrayNames:[]
     },
     methods:{
       addChat: function(item){
@@ -124,24 +125,41 @@ var app = new Vue (
       chatFinder:function(){
         if (this.userFinder != "") {
           // console.log(this.userFinder);
-          let userInput = this.userFinder;
-          // console.log(this.contacts[0].name);
+          // console.log(this.contacts[0].name);     //mi stampa il primo nome
+
           this.contacts.forEach((item) => {
-            // console.log(item.name);      mi stampa tutti i nomi
+            this.arrayNames.push(item.name);
 
-
-            // console.log(item.visible);    mi stampa le 4 visibilità
-
-            for(var i = 0; i < item.name.length; i++) {
-              // console.log(item.name[i]);  mi stampa tutti nomi array like
-              if (item.name[i].includes(userInput)) {
-                // console.log(userInput);
-                item.visible = true;
-              } else {
-                item.visible = false;
-              }
-            }
           });
+          console.log(this.arrayNames);
+
+
+
+
+          // let userInput = this.userFinder;
+
+          // this.contacts.forEach((item) => {
+          //   // console.log(item.name);      mi stampa tutti i nomi
+          //   // console.log(item.visible);    mi stampa le 4 visibilità
+          //
+          //
+          //
+          //   // for(var i = 0; i < item.name.length; i++) {
+          //   //   console.log(item.name[i]);  //mi stampa tutti nomi array like
+          //   //   // if (item.name[i].includes(userInput)) {
+          //   //   //   // console.log(userInput);
+          //   //   //   item.visible = true;
+          //   //   // } else {
+          //   //   //   item.visible = false;
+          //   //   // }
+          //   // }
+          // //
+          // //
+          // //
+          // // });
+
+
+
         }
       }
     }
