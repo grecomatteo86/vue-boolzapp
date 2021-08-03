@@ -8,26 +8,16 @@
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script>dayjs().format()</script>
   <!-- /day.js_cdn -->
-  <!-- font_awesome_cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <!-- /font_awesome_cdn -->
-  <!-- google_fonts_link -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-  <!-- /google_fonts_link -->
-  <!-- vue_development_version -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <!-- /vue_development_version -->
-  <!-- stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- /stylesheet -->
   <title>Boolzapp Web</title>
 </head>
 <body>
   <div id="app" class="wrapper">
-    <!-- left_container -->
     <div class="left_container">
-      <!-- left_header -->
       <div class="lid">
         <div class="lid_avatar_container">
           <div class="lid_logo_container">
@@ -43,8 +33,6 @@
           <a href="#"><i class="fas fa-ellipsis-v"></i></a>
         </div>
       </div>
-      <!-- /left_header -->
-      <!-- notifications -->
       <div class="nots_container">
         <div class="left_nots">
           <i class="fas fa-bell-slash"></i>
@@ -54,20 +42,15 @@
           <p><a href="#">Attiva notifiche desktop</a></p>
         </div>
       </div>
-      <!-- /notifications -->
-      <!-- finder -->
       <div class="finder_input">
         <label class="label" for=""><i class="fas fa-search"></i></label>
         <input v-model="userFinder" @keyup="chatFinder" class="finder_field" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
       </div>
-      <!-- /finder -->
-      <!-- contacts -->
       <div class="contacts_container">
         <ul class="contacts_list">
           <li class="contact_item" v-for="(item,index) in contacts" v-bind:class=" chatIndex == index ? 'active' : '' " @click="chatIndex = index" v-show="item.visible == true">
             <div class="logo_container">
               <img :src="`img/avatar${item.avatar}.jpg`" class="avatars" :alt="item.name">
-              <!-- <img :src="'img/avatar' + item.avatar + '.jpg'" alt=""> -->
             </div>
             <div class="name_container">
               <h2>{{item.name}}</h2>
@@ -75,12 +58,8 @@
           </li>
         </ul>
       </div>
-      <!-- /contacts -->
     </div>
-    <!-- /left_container -->
-    <!-- right_container -->
     <div class="right_container">
-      <!-- header -->
       <div class="lid">
         <div class="lid_avatar_container">
           <div class="lid_logo_container" v-for="(item,index) in contacts" v-if="chatIndex == index">
@@ -97,7 +76,6 @@
           <a href="#"><i class="fas fa-ellipsis-v"></i></a>
         </div>
       </div>
-      <!-- /header -->
       <div class="messages_container">
         <div class="message_frame">
           <div class="sent message" v-for="(item,index) in contacts[chatIndex].messages" v-bind:class=" item.status == 'sent' ? 'sent' : 'received' ">
@@ -106,7 +84,6 @@
           </div>
         </div>
       </div>
-      <!-- input_section -->
       <div class="lid">
         <div class="emoticons_container">
           <a href="#"><i class="far fa-grin"></i></a>
@@ -118,13 +95,8 @@
           <a href="#"><i class="fas fa-microphone"></i></a>
         </div>
       </div>
-      <!-- /input_section -->
     </div>
-    <!-- /right_container -->
   </div>
-
-  <!-- javascript -->
   <script src="js/script.js" charset="utf-8"></script>
-  <!-- /javascript -->
 </body>
 </html>
